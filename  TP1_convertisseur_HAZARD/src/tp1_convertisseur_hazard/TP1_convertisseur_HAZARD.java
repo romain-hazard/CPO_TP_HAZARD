@@ -32,22 +32,21 @@ public class TP1_convertisseur_HAZARD {
                 System.out.println("Veuillez choisir une valeur entre 1 et 6");
             }
         }
-if(Conv==1){
-        System.out.println("La temperature en Kelvin est " + CelciusVersKelvin(Temp));
-    }
-else if(Conv==2){
-    System.out.println("La temperature en Celcius est " + KelvinVersCelcius(Temp));
-}else if(Conv==3){
-    System.out.println("La temperature en Celcius est " + FarenheitVersCelcius(Temp));
-}else if(Conv==4){
-    System.out.println("La temperature en Farenheit est " + CelciusVersFarenheit(Temp));
-}else if(Conv==5){
-    System.out.println("La temperature en Farenheit est " + KelvinVersFarenheit(Temp));
-}else if(Conv==6){
-    System.out.println("La temperature en Kelvin est " + FarenheitVersKelvin(Temp));
-}
+        if (Conv == 1) {
+            System.out.println("La temperature en Kelvin est " + CelciusVersKelvin(Temp));
+        } else if (Conv == 2) {
+            System.out.println("La temperature en Celcius est " + KelvinVersCelcius(Temp));
+        } else if (Conv == 3) {
+            System.out.println("La temperature en Celcius est " + FarenheitVersCelcius(Temp));
+        } else if (Conv == 4) {
+            System.out.println("La temperature en Farenheit est " + CelciusVersFarenheit(Temp));
+        } else if (Conv == 5) {
+            System.out.println("La temperature en Farenheit est " + KelvinVersFarenheit(Temp));
+        } else if (Conv == 6) {
+            System.out.println("La temperature en Kelvin est " + FarenheitVersKelvin(Temp));
+        }
 
-}
+    }
 
     public static double CelciusVersKelvin(double tCelcius) {
         return (tCelcius + 273);
