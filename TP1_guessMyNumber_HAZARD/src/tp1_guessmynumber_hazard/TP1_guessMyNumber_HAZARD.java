@@ -20,7 +20,7 @@ public class TP1_guessMyNumber_HAZARD {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random generateurAleat = new Random();
-        int n = generateurAleat.nextInt(100);
+        int n = generateurAleat.nextInt(100)+1;
         int Nb = -1;
         int Cpt = 0;
         int Dif = 0;
@@ -30,32 +30,31 @@ public class TP1_guessMyNumber_HAZARD {
             System.out.println("2) Normal");
             System.out.println("3) Difficile");
             Dif = sc.nextInt();
-            if (1 > Dif || Dif > 6) {
+            if (1 > Dif || Dif > 3) {
                 System.out.println("Veuillez choisir une valeur entre 1 et 3");
             }
         }
 
         if (Dif == 3) {
-                while (Nb != n) {
-                   
-                    System.out.println("Saisissez un nombre entre 1 et 100");
-                    Nb = sc.nextInt();
-                    if (Nb == n) {
-                        System.out.println("Gagné");
-                    } else if (Nb < n) {
-                        System.out.println("Trop petit");
-                    } else if (Nb > n) {
-                        System.out.println("Trop grand");
-                    }
+            while (Nb != n && Cpt < 3) {
+                System.out.println("Saisissez un nombre entre 1 et 100");
+                Nb = sc.nextInt();
+                Cpt ++;
                 
-                    System.out.println("Perdu");
-                    
-            } 
-             
-        
-            System.out.println("Vous avez fait " + Cpt + " tentatives");
-        } else if (Dif == 3 && Cpt>3) 
-        {System.out.println("Perdu");
+                if (Nb == n) {
+                    System.out.println("Gagné");
+                } else if (Nb < n) {
+                    System.out.println("Trop petit");
+                } else {
+                    System.out.println("Trop grand");
                 }
+
+            }
+            if (Nb != n) {
+                System.out.println("Perdu ! Le nombre était : " + n);
+            }
+            System.out.println("Vous avez fait " + Cpt + " tentatives");
+
+        }
     }
-    }
+}
