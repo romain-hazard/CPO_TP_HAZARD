@@ -13,26 +13,32 @@ public class Convertisseur2 {
 
 
     public double CelciusVersKelvin(double tCelcius) {
+        nbConversions++;
         return (tCelcius + 273);
     }
 
     public double KelvinVersCelcius(double tKelvin) {
+        nbConversions++;
         return (tKelvin - 273);
     }
 
     public double FarenheitVersCelcius(double tFarenheit) {
+        nbConversions++;
         return ((tFarenheit - 32) * (5.0 / 9.0));
     }
 
     public double CelciusVersFarenheit(double tCelcius) {
+        nbConversions++;
         return ((9.0 / 5.0) * tCelcius + 32);
     }
 
     public double KelvinVersFarenheit(double tKelvin) {
+        nbConversions++;
         return ((9.0 / 5.0) * (tKelvin - 273) + 32);
     }
 
     public double FarenheitVersKelvin(double tFarenheit) {
+        nbConversions++;
         return ((tFarenheit - 32) * (5.0 / 9.0) + 273);
     }
 
