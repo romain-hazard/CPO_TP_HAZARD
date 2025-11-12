@@ -21,6 +21,24 @@ public class Personne {
         nbVoitures=0;
     }
     
+    public boolean ajouter_voiture(Voiture voiture_a_ajouter){
+        if(voiture_a_ajouter.Proprietaire!=null){
+            return false;
+        }
+        
+        if(nbVoitures>=3){
+            return false;
+        }
+        this.liste_voitures[this.nbVoitures] = voiture_a_ajouter;
+
+        this.nbVoitures++;
+
+        voiture_a_ajouter.Proprietaire = this;
+
+        return true;
+    }
+    
+    
     @Override
     public String toString() {
         return nom + prenom;
