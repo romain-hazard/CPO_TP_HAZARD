@@ -8,19 +8,15 @@ package tp3_heroic_fantasy_hazard;
  *
  * @author romai
  */
-public class Baton extends Arme {
-    int Age;
+public class Guerrier extends Personnage{
     
-    public Baton(String nom, int niv, int age) {
-        super(nom, niv);
-        
-        if(Age>100){
-            age=100;
-        }else if(Age<0){
-            age=0;
-        }else {
-            Age=age;
-        }
+    boolean cheval;
+    
+    public Guerrier(int nom, int niveau_vie, boolean cheval) {
+        super(nom, niveau_vie);
     }
-    
+
+    public void setCheval(boolean cheval) {
+        this.cheval = cheval;
+    }
 }
