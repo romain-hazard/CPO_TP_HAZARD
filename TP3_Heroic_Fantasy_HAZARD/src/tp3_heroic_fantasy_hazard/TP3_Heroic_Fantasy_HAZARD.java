@@ -4,6 +4,9 @@
  */
 package tp3_heroic_fantasy_hazard;
 
+import Personnages.Magicien;
+import Personnages.Guerrier;
+import Personnages.Personnage;
 import Armes.*;
 import java.util.ArrayList;
 
@@ -29,6 +32,23 @@ public class TP3_Heroic_Fantasy_HAZARD {
         armes.add(Durandal);
         armes.add(Chene);
         armes.add(Charme);
+        
+        
+        for (int i=0; i<armes.size(); i++){
+            System.out.println(armes.get(i));
+        }
+        
+        Magicien Gandalf=new Magicien("Gandalf", 65, true);
+        Magicien Garcimore=new Magicien("Garcimore", 44, false);
+        Guerrier Conan=new Guerrier("Conan", 78, false);
+        Guerrier Lannister=new Guerrier("Lannister", 45, true);
+        
+        
+        ArrayList<Personnage>personnages =new ArrayList<>();
+        personnages.add(Gandalf);
+        personnages.add(Garcimore);
+        personnages.add(Conan);
+        personnages.add(Lannister);
         
         
         for (int i=0; i<armes.size(); i++){
