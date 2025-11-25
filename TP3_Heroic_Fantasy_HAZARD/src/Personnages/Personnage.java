@@ -24,7 +24,7 @@ public abstract class Personnage {
     public void ArmeEq(Arme a){
         for(int i=0; i<5; i++){
             if(a.equals(armes.get(i))){
-                Arme_en_Main=armes.getNom(i);
+                //Arme_en_Main=armes.getNom(i);
             }
         }
     }
@@ -48,7 +48,7 @@ public abstract class Personnage {
 
     for (Arme a : armes) {
         if (a.getNom().equals(nomArme)) {
-            Arme_en_Main = a;
+            //Arme_en_Main = a;
             System.out.println("Arme équipée : " + nomArme);
             trouve = true;
             break;
