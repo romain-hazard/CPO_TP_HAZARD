@@ -17,7 +17,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     /**
      * Creates new form Interface
      */
-    
+    int score=0;
     int compteur=0;
     int indexQuestionCourante = 0;
  
@@ -53,6 +53,53 @@ questions.add(new Question("Capitale de la Suisse ?", "Zurich", "Genève", "Bern
 questions.add(new Question("Capitale de la Belgique ?", "Bruges", "Bruxelles", "Liège", "Anvers", 2));
 questions.add(new Question("Capitale des Pays-Bas ?", "Rotterdam", "Amsterdam", "La Haye", "Utrecht", 2));
 questions.add(new Question("Capitale du Danemark ?", "Oslo", "Stockholm", "Copenhague", "Helsinki", 3));
+
+questions.add(new Question("Capitale de la Suède ?", "Malmö", "Stockholm", "Göteborg", "Uppsala", 2));
+questions.add(new Question("Capitale de la Norvège ?", "Oslo", "Bergen", "Trondheim", "Stavanger", 1));
+questions.add(new Question("Capitale de la Finlande ?", "Tampere", "Helsinki", "Turku", "Oulu", 2));
+questions.add(new Question("Capitale de l’Islande ?", "Reykjavik", "Akureyri", "Selfoss", "Vik", 1));
+questions.add(new Question("Capitale de l’Irlande ?", "Cork", "Dublin", "Galway", "Limerick", 2));
+
+questions.add(new Question("Capitale de la Russie ?", "Moscou", "Saint-Pétersbourg", "Kazan", "Sotchi", 1));
+questions.add(new Question("Capitale de la Turquie ?", "Istanbul", "Ankara", "Izmir", "Antalya", 2));
+questions.add(new Question("Capitale de la Grèce ?", "Athènes", "Thessalonique", "Patras", "Heraklion", 1));
+questions.add(new Question("Capitale de la Bulgarie ?", "Varna", "Plovdiv", "Sofia", "Burgas", 3));
+questions.add(new Question("Capitale de la Roumanie ?", "Bucarest", "Cluj", "Timisoara", "Iasi", 1));
+
+questions.add(new Question("Capitale des États-Unis ?", "New York", "Washington D.C.", "Chicago", "Boston", 2));
+questions.add(new Question("Capitale du Canada ?", "Toronto", "Ottawa", "Vancouver", "Montréal", 2));
+questions.add(new Question("Capitale du Mexique ?", "Monterrey", "México", "Guadalajara", "Puebla", 2));
+questions.add(new Question("Capitale du Brésil ?", "Rio", "Brasilia", "São Paulo", "Salvador", 2));
+questions.add(new Question("Capitale de l’Argentine ?", "Buenos Aires", "Córdoba", "Rosario", "Mendoza", 1));
+
+questions.add(new Question("Capitale du Chili ?", "Valparaiso", "Santiago", "Concepción", "Arica", 2));
+questions.add(new Question("Capitale du Pérou ?", "Arequipa", "Cusco", "Lima", "Trujillo", 3));
+questions.add(new Question("Capitale de la Colombie ?", "Medellín", "Bogotá", "Cali", "Cartagena", 2));
+questions.add(new Question("Capitale du Venezuela ?", "Maracaibo", "Caracas", "Valencia", "Barquisimeto", 2));
+questions.add(new Question("Capitale de Cuba ?", "Santiago", "Havana", "Varadero", "Matanzas", 2));
+
+questions.add(new Question("Capitale du Maroc ?", "Casablanca", "Marrakech", "Rabat", "Fès", 3));
+questions.add(new Question("Capitale de l’Algérie ?", "Oran", "Alger", "Annaba", "Constantine", 2));
+questions.add(new Question("Capitale de la Tunisie ?", "Sfax", "Sousse", "Tunis", "Bizerte", 3));
+questions.add(new Question("Capitale de l’Égypte ?", "Alexandrie", "Gizeh", "Port-Saïd", "Le Caire", 4));
+questions.add(new Question("Capitale de l’Afrique du Sud ?", "Le Cap", "Pretoria", "Johannesburg", "Durban", 2));
+
+questions.add(new Question("Capitale du Nigeria ?", "Lagos", "Abuja", "Kano", "Ibadan", 2));
+questions.add(new Question("Capitale du Kenya ?", "Mombasa", "Nairobi", "Kisumu", "Eldoret", 2));
+questions.add(new Question("Capitale de l’Éthiopie ?", "Gondar", "Mékele", "Addis-Abeba", "Dire Dawa", 3));
+questions.add(new Question("Capitale du Ghana ?", "Kumasi", "Accra", "Tamale", "Tema", 2));
+questions.add(new Question("Capitale du Sénégal ?", "Dakar", "Saint-Louis", "Thiès", "Ziguinchor", 1));
+
+questions.add(new Question("Capitale de la Chine ?", "Shanghai", "Pékin", "Shenzhen", "Wuhan", 2));
+questions.add(new Question("Capitale du Japon ?", "Kyoto", "Osaka", "Tokyo", "Nagoya", 3));
+questions.add(new Question("Capitale de l’Inde ?", "Mumbai", "Delhi", "New Delhi", "Bangalore", 3));
+questions.add(new Question("Capitale de la Corée du Sud ?", "Busan", "Séoul", "Incheon", "Daegu", 2));
+questions.add(new Question("Capitale de l’Indonésie ?", "Jakarta", "Surabaya", "Bali", "Medan", 1));
+
+questions.add(new Question("Capitale de l’Australie ?", "Sydney", "Melbourne", "Canberra", "Perth", 3));
+questions.add(new Question("Capitale de la Nouvelle-Zélande ?", "Queenstown", "Wellington", "Auckland", "Christchurch", 2));
+questions.add(new Question("Capitale des Philippines ?", "Cebu", "Manille", "Davao", "Luzon", 2));
+questions.add(new Question("Capitale de la Thaïlande ?", "Phuket", "Chiang Mai", "Bangkok", "Pattaya", 3));
 questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi", "Hue", "Da Nang", 2));
     
 
@@ -77,17 +124,16 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
         btnRep4 = new javax.swing.JButton();
         lblFeedback = new javax.swing.JLabel();
         btnSuivant = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lblScore = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblQuestion.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
-        lblQuestion.setText("BONJOUR");
+        lblQuestion.setText("Capitales");
         getContentPane().add(lblQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, -1, -1));
 
         btnRep2.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        btnRep2.setText("Ok");
         btnRep2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRep2ActionPerformed(evt);
@@ -96,38 +142,34 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
         getContentPane().add(btnRep2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 190, 30));
 
         btnRep1.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        btnRep1.setText("Ok");
         btnRep1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRep1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 130, 40));
+        getContentPane().add(btnRep1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 190, 30));
 
         btnRep3.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        btnRep3.setText("Ok");
         btnRep3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRep3ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRep3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 170, -1));
+        getContentPane().add(btnRep3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 190, 30));
 
         btnRep4.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        btnRep4.setText("Ok");
         btnRep4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRep4ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRep4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 160, -1));
+        getContentPane().add(btnRep4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 190, 30));
 
         lblFeedback.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        lblFeedback.setText("jLabel1");
-        getContentPane().add(lblFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, -1, -1));
+        getContentPane().add(lblFeedback, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 120, -1));
 
         btnSuivant.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        btnSuivant.setText("jButton1");
+        btnSuivant.setText("Suivant");
         btnSuivant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSuivantActionPerformed(evt);
@@ -135,9 +177,9 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
         });
         getContentPane().add(btnSuivant, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
-        jLabel1.setText("lblScore");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
+        lblScore.setFont(new java.awt.Font("Avenir Next Cyr", 0, 14)); // NOI18N
+        lblScore.setText("Score : 0");
+        getContentPane().add(lblScore, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -151,6 +193,7 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
 
     if (numeroChoisi == q.getIndexBonneReponse()) {
         lblFeedback.setText("Bonne réponse");
+        score++;
         
     } else {
         lblFeedback.setText("Mauvaise réponse");
@@ -168,7 +211,8 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
     Question q = questions.get(indexQuestionCourante);   
 
     if (numeroChoisi == q.getIndexBonneReponse()) {
-        lblFeedback.setText("Bonne réponse");                          
+        lblFeedback.setText("Bonne réponse");   
+        score++;
     } else {
         lblFeedback.setText("Mauvaise réponse");
     }
@@ -187,6 +231,7 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
 
     if (numeroChoisi == q.getIndexBonneReponse()) {
         lblFeedback.setText("Bonne réponse");
+        score++;
         
     } else {
         lblFeedback.setText("Mauvaise réponse");
@@ -205,6 +250,7 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
 
     if (numeroChoisi == q.getIndexBonneReponse()) {
         lblFeedback.setText("Bonne réponse");
+        score++;
         
     } else {
         lblFeedback.setText("Mauvaise réponse");
@@ -217,14 +263,15 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
     }//GEN-LAST:event_btnRep4ActionPerformed
 
     private void btnSuivantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuivantActionPerformed
-        indexQuestionCourante++; // passer à la question suivante
+        indexQuestionCourante++; 
 
     if (indexQuestionCourante < questions.size()) {
-        afficherQuestionCourante(); // afficher la question suivante
-        lblFeedback.setText("");     // effacer le feedback précédent
+        afficherQuestionCourante(); 
+        lblFeedback.setText("");
+        lblScore.setText("Score :"+ score);
     } else {
-        lblFeedback.setText("Quiz terminé. Score : ");
-        btnSuivant.setEnabled(false); // désactiver le bouton suivant
+        
+        btnSuivant.setEnabled(false); 
         btnRep1.setEnabled(false);
         btnRep2.setEnabled(false);
         btnRep3.setEnabled(false);
@@ -263,9 +310,9 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
     private javax.swing.JButton btnRep3;
     private javax.swing.JButton btnRep4;
     private javax.swing.JButton btnSuivant;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblFeedback;
     private javax.swing.JLabel lblQuestion;
+    private javax.swing.JLabel lblScore;
     // End of variables declaration//GEN-END:variables
 }
 
