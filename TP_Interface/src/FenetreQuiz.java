@@ -268,7 +268,7 @@ questions.add(new Question("Capitale du Vietnam ?", "Hô-Chi-Minh-Ville", "Hanoi
     if (indexQuestionCourante < questions.size()) {
         afficherQuestionCourante(); 
         lblFeedback.setText("");
-        lblScore.setText("Score :"+ score);
+        lblScore.setText("Score : "+ score + " / " + questions.size());
     } else {
         
         btnSuivant.setEnabled(false); 
