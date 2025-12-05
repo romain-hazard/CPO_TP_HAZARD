@@ -11,7 +11,7 @@ public class Combinaison {
     private int Chiffre_Al_1;
     private int Chiffre_Al_2;
     private int Chiffre_Al_3;
-    private int Chiffre_Al_4;
+    private int Chiffre_Al__4;
     
     private int Chiffre_Comb_1;
     private int Chiffre_Comb_2;
