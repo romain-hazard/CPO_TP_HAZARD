@@ -30,12 +30,7 @@ public class Combinaison {
     
    
 
-    public Combinaison(int Chiffre_Al_1, int Chiffre_Al_2, int Chiffre_Al_3, int Chiffre_Al_4) {
-        this.Chiffre_Al_1 = Chiffre_Al_1;
-        this.Chiffre_Al_2 = Chiffre_Al_2;
-        this.Chiffre_Al_3 = Chiffre_Al_3;
-        this.Chiffre_Al_4 = Chiffre_Al_4;
-    }
+    
   
 
     
