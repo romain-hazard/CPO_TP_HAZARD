@@ -15,6 +15,11 @@ public class FenetreCadenas extends javax.swing.JFrame {
      * Creates new form FenetreCadenas
      */
     public FenetreCadenas() {
+        
+        
+        
+        
+        
         initComponents();
     }
 
