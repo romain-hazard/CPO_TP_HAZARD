@@ -55,8 +55,8 @@ public class FenetreCadenas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        texte_intro.setText("jLabel1");
-        getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+        texte_intro.setText("Trouver le bon code en moins de 5 tentatives");
+        getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
 
         up_chiffre_1.setText("/\\");
             up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
@@ -142,23 +142,23 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
 
-                        texte_lbl_nb_chiffres_exacts.setText("jLabel1");
+                        texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts :");
                         getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
                         texte_nb_chiffres_exacts.setText("jLabel1");
-                        getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+                        getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
-                        texte_lbl_nb_chiffres_hauts.setText("jLabel1");
+                        texte_lbl_nb_chiffres_hauts.setText("Nombre de chiffres trop hauts :");
                         getContentPane().add(texte_lbl_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
                         texte_nb_chiffres_hauts.setText("jLabel1");
-                        getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+                        getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
-                        texte_lbl_nb_chiffres_bas.setText("jLabel1");
+                        texte_lbl_nb_chiffres_bas.setText("Nombre de chiffres trop bas :");
                         getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
                         texte_nb_chiffres_bas.setText("jLabel1");
-                        getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+                        getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
                         texte_score.setText("jLabel1");
                         getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
@@ -197,6 +197,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bouton_testerActionPerformed
 
+    
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
         int value = Integer.parseInt(texte_chiffre_2.getText());
         if (value < 9) {
