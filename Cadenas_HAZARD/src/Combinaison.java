@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -8,24 +11,35 @@
  * @author romai
  */
 public class Combinaison {
-    private int Chiffre_Al_1;
-    private int Chiffre_Al_2;
-    private int Chiffre_Al_3;
-    private int Chiffre_Al__4;
-    
-    private int Chiffre_Comb_1;
-    private int Chiffre_Comb_2;
-    private int Chiffre_Comb_3;
-    private int Chiffre_Comb_4;
     
     
+    private int[] combinaisonSecrete;
     
-    public Combinaison(int Chiffre_Comb_1, int Chiffre_Comb_2, int Chiffre_Comb_3, int Chiffre_Comb_4) {
-        this.Chiffre_Comb_1 = Chiffre_Comb_1;
-        this.Chiffre_Comb_2 = Chiffre_Comb_2;
-        this.Chiffre_Comb_3 = Chiffre_Comb_3;
-        this.Chiffre_Comb_4 = Chiffre_Comb_4;
+    
+    public void genererCombinaison(){
+        combinaisonSecrete=new int[4];
+        Random r= new Random();
+        for (int i=0; i<4;i++){
+            r.nextInt(10);}
+    } 
+    
+    
+      public int[] getCombinaisonSecrete() {
+        return combinaisonSecrete;
     }
+
+    public int compterChiffresExacts(int[] prop) {
+        int exacts = 0;
+        for (int i = 0; i < 4; i++) {
+            if (prop[i] == combinaisonSecrete[i]) exacts++;
+        }
+        return exacts;
+    }
+    
+    
+        
+        }
+
     
     
    
@@ -35,4 +49,4 @@ public class Combinaison {
 
     
     
-    }    
+    

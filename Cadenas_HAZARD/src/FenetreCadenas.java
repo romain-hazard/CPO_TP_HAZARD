@@ -8,18 +8,14 @@
  * @author romai
  */
 public class FenetreCadenas extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FenetreCadenas.class.getName());
 
     /**
      * Creates new form FenetreCadenas
      */
     public FenetreCadenas() {
-        
-        
-        
-        
-        
+
         initComponents();
     }
 
@@ -62,92 +58,182 @@ public class FenetreCadenas extends javax.swing.JFrame {
         texte_intro.setText("jLabel1");
         getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
-        up_chiffre_1.setText("jButton1");
-        getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        up_chiffre_1.setText("/\\");
+            up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    up_chiffre_1ActionPerformed(evt);
+                }
+            });
+            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        up_chiffre_2.setText("jButton1");
-        getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+            up_chiffre_2.setText("/\\");
+                up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
+                    public void actionPerformed(java.awt.event.ActionEvent evt) {
+                        up_chiffre_2ActionPerformed(evt);
+                    }
+                });
+                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
-        up_chiffre_3.setText("jButton1");
-        up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                up_chiffre_3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
+                up_chiffre_3.setText("/\\");
+                    up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                            up_chiffre_3ActionPerformed(evt);
+                        }
+                    });
+                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
-        up_chiffre_4.setText("jButton1");
-        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
+                    up_chiffre_4.setText("/\\");
+                        up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                up_chiffre_4ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
-        texte_chiffre_1.setText("jLabel1");
-        getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+                        texte_chiffre_1.setText("0");
+                        getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
-        texte_chiffre_2.setText("jLabel1");
-        getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
+                        texte_chiffre_2.setText("0");
+                        getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
-        texte_chiffre_3.setText("jLabel1");
-        getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+                        texte_chiffre_3.setText("0");
+                        getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
 
-        texte_chiffre_4.setText("jLabel1");
-        getContentPane().add(texte_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
+                        texte_chiffre_4.setText("0");
+                        getContentPane().add(texte_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
-        down_chiffre_1.setText("jButton1");
-        down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                down_chiffre_1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+                        down_chiffre_1.setText("\\/");
+                        down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_1ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
-        down_chiffre_2.setText("jButton1");
-        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+                        down_chiffre_2.setText("\\/");
+                        down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_2ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
-        down_chiffre_3.setText("jButton1");
-        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
+                        down_chiffre_3.setText("\\/");
+                        down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_3ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
 
-        down_chiffre_4.setText("jButton1");
-        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
+                        down_chiffre_4.setText("\\/");
+                        down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                down_chiffre_4ActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
 
-        bouton_tester.setText("jButton1");
-        getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+                        bouton_tester.setText("Tester");
+                        bouton_tester.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                bouton_testerActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
 
-        texte_lbl_nb_chiffres_exacts.setText("jLabel1");
-        getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+                        texte_lbl_nb_chiffres_exacts.setText("jLabel1");
+                        getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-        texte_nb_chiffres_exacts.setText("jLabel1");
-        getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+                        texte_nb_chiffres_exacts.setText("jLabel1");
+                        getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
 
-        texte_lbl_nb_chiffres_hauts.setText("jLabel1");
-        getContentPane().add(texte_lbl_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+                        texte_lbl_nb_chiffres_hauts.setText("jLabel1");
+                        getContentPane().add(texte_lbl_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
-        texte_nb_chiffres_hauts.setText("jLabel1");
-        getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
+                        texte_nb_chiffres_hauts.setText("jLabel1");
+                        getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
 
-        texte_lbl_nb_chiffres_bas.setText("jLabel1");
-        getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+                        texte_lbl_nb_chiffres_bas.setText("jLabel1");
+                        getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
-        texte_nb_chiffres_bas.setText("jLabel1");
-        getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+                        texte_nb_chiffres_bas.setText("jLabel1");
+                        getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
-        texte_score.setText("jLabel1");
-        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
+                        texte_score.setText("jLabel1");
+                        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
 
-        teste_tentatives.setText("jLabel1");
-        getContentPane().add(teste_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
+                        teste_tentatives.setText("jLabel1");
+                        getContentPane().add(teste_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
-        bouton_recommencer.setText("jButton1");
-        getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+                        bouton_recommencer.setText("jButton1");
+                        getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+                        pack();
+                    }// </editor-fold>//GEN-END:initComponents
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
-        // TODO add your handling code here:
+        int value = Integer.parseInt(texte_chiffre_3.getText());
+        if (value < 9) {
+            texte_chiffre_3.setText(String.valueOf(value + 1));
+        }// TODO add your handling code here:
     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
-        // TODO add your handling code here:
+        int value = Integer.parseInt(texte_chiffre_1.getText());
+        if (value >0) {
+            texte_chiffre_1.setText(String.valueOf(value - 1));
+        }// TODO add your handling code here:
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
+
+    private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
+        int value = Integer.parseInt(texte_chiffre_1.getText());
+        if (value < 9) {
+            texte_chiffre_1.setText(String.valueOf(value + 1));
+        }
+    }//GEN-LAST:event_up_chiffre_1ActionPerformed
+
+    private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bouton_testerActionPerformed
+
+    private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
+        int value = Integer.parseInt(texte_chiffre_2.getText());
+        if (value < 9) {
+            texte_chiffre_2.setText(String.valueOf(value + 1));
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_up_chiffre_2ActionPerformed
+
+    private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
+        int value = Integer.parseInt(texte_chiffre_4.getText());
+        if (value < 9) {
+            texte_chiffre_4.setText(String.valueOf(value + 1));}
+        
+    }//GEN-LAST:event_up_chiffre_4ActionPerformed
+
+    private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
+        int value = Integer.parseInt(texte_chiffre_4.getText());
+        if (value >0) {
+            texte_chiffre_4.setText(String.valueOf(value - 1));
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_down_chiffre_4ActionPerformed
+
+    private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
+        int value = Integer.parseInt(texte_chiffre_3.getText());
+        if (value >0) {
+            texte_chiffre_3.setText(String.valueOf(value - 1));
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_down_chiffre_3ActionPerformed
+
+    private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
+int value = Integer.parseInt(texte_chiffre_2.getText());
+        if (value >0) {
+            texte_chiffre_2.setText(String.valueOf(value - 1));
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_down_chiffre_2ActionPerformed
+    
+    
 
     /**
      * @param args the command line arguments
@@ -156,7 +242,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
