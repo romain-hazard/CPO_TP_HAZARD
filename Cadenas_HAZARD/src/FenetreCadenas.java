@@ -9,6 +9,11 @@
  */
 public class FenetreCadenas extends javax.swing.JFrame {
 
+    private Combinaison combi = new Combinaison();
+    private int tentatives = 0;
+    private int tentative = 0;
+    private final int maxTentatives = 5;
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FenetreCadenas.class.getName());
 
     /**
@@ -17,6 +22,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
     public FenetreCadenas() {
 
         initComponents();
+        combi.genererCombinaison();
     }
 
     /**
@@ -145,28 +151,33 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts :");
                         getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-                        texte_nb_chiffres_exacts.setText("jLabel1");
+                        texte_nb_chiffres_exacts.setText("Exacts : 0");
                         getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
                         texte_lbl_nb_chiffres_hauts.setText("Nombre de chiffres trop hauts :");
                         getContentPane().add(texte_lbl_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
-                        texte_nb_chiffres_hauts.setText("jLabel1");
+                        texte_nb_chiffres_hauts.setText("Trop bas : 0");
                         getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
                         texte_lbl_nb_chiffres_bas.setText("Nombre de chiffres trop bas :");
                         getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
-                        texte_nb_chiffres_bas.setText("jLabel1");
+                        texte_nb_chiffres_bas.setText("Trop bas : 0");
                         getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
-                        texte_score.setText("jLabel1");
+                        texte_score.setText("Tentatives");
                         getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
 
-                        teste_tentatives.setText("jLabel1");
+                        teste_tentatives.setText("Tentatives : 0");
                         getContentPane().add(teste_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
-                        bouton_recommencer.setText("jButton1");
+                        bouton_recommencer.setText("Recommencer");
+                        bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                bouton_recommencerActionPerformed(evt);
+                            }
+                        });
                         getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
                         pack();
@@ -181,7 +192,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
         int value = Integer.parseInt(texte_chiffre_1.getText());
-        if (value >0) {
+        if (value > 0) {
             texte_chiffre_1.setText(String.valueOf(value - 1));
         }// TODO add your handling code here:
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
@@ -194,10 +205,37 @@ public class FenetreCadenas extends javax.swing.JFrame {
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
-        // TODO add your handling code here:
+        if (tentative >= maxTentatives) {
+        texte_intro.setText("Vous avez perdu !");
+            return;
+            
+        }
+
+        tentative++;
+
+        int[] prop = new int[4];
+        prop[0] = Integer.parseInt(texte_chiffre_1.getText());
+        prop[1] = Integer.parseInt(texte_chiffre_2.getText());
+        prop[2] = Integer.parseInt(texte_chiffre_3.getText());
+        prop[3] = Integer.parseInt(texte_chiffre_4.getText());
+
+        
+        teste_tentatives.setText("Tentatvies : "+tentative + "/" + maxTentatives);
+        
+
+        int exacts = combi.compterChiffresExacts(prop);
+        texte_nb_chiffres_exacts.setText("Exacts : " + exacts);
+
+        int hauts = combi.compterChiffresTropHauts(prop);
+        int bas = combi.compterChiffresTropBas(prop);
+
+        texte_nb_chiffres_hauts.setText("Trop hauts : " + hauts);
+        texte_nb_chiffres_bas.setText("Trop bas : " + bas);
+
+
     }//GEN-LAST:event_bouton_testerActionPerformed
 
-    
+
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
         int value = Integer.parseInt(texte_chiffre_2.getText());
         if (value < 9) {
@@ -209,32 +247,50 @@ public class FenetreCadenas extends javax.swing.JFrame {
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
         int value = Integer.parseInt(texte_chiffre_4.getText());
         if (value < 9) {
-            texte_chiffre_4.setText(String.valueOf(value + 1));}
-        
+            texte_chiffre_4.setText(String.valueOf(value + 1));
+        }
+
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
         int value = Integer.parseInt(texte_chiffre_4.getText());
-        if (value >0) {
+        if (value > 0) {
             texte_chiffre_4.setText(String.valueOf(value - 1));
         }// TODO add your handling code here:
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
         int value = Integer.parseInt(texte_chiffre_3.getText());
-        if (value >0) {
+        if (value > 0) {
             texte_chiffre_3.setText(String.valueOf(value - 1));
         }// TODO add your handling code here:
     }//GEN-LAST:event_down_chiffre_3ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
-int value = Integer.parseInt(texte_chiffre_2.getText());
-        if (value >0) {
+        int value = Integer.parseInt(texte_chiffre_2.getText());
+        if (value > 0) {
             texte_chiffre_2.setText(String.valueOf(value - 1));
-        }        // TODO add your handling code here:
+        }
     }//GEN-LAST:event_down_chiffre_2ActionPerformed
-    
-    
+
+    private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
+        texte_chiffre_1.setText("0");
+        texte_chiffre_2.setText("0");
+        texte_chiffre_3.setText("0");
+        texte_chiffre_4.setText("0");
+
+        texte_nb_chiffres_exacts.setText("Exacts : 0");
+        texte_nb_chiffres_hauts.setText("Trop hauts : 0");
+        texte_nb_chiffres_bas.setText("Trop bas : 0");
+
+        combi.genererNouvelleCombinaison();
+        
+        tentative=0;
+        teste_tentatives.setText("Tentatvies : "+tentative + "/" + maxTentatives);
+        texte_intro.setText("Trouver le bon code en moins de 5 tentatives");
+        
+
+    }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     /**
      * @param args the command line arguments
