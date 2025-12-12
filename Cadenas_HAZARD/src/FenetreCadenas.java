@@ -10,7 +10,6 @@
 public class FenetreCadenas extends javax.swing.JFrame {
 
     private Combinaison combi = new Combinaison();
-    private int tentatives = 0;
     private int tentative = 0;
     private final int maxTentatives = 5;
 
@@ -61,9 +60,11 @@ public class FenetreCadenas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        texte_intro.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
         texte_intro.setText("Trouver le bon code en moins de 5 tentatives");
         getContentPane().add(texte_intro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
 
+        up_chiffre_1.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
         up_chiffre_1.setText("/\\");
             up_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +73,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
             });
             getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
+            up_chiffre_2.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
             up_chiffre_2.setText("/\\");
                 up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,6 +82,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                 });
                 getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
+                up_chiffre_3.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                 up_chiffre_3.setText("/\\");
                     up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +91,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                     });
                     getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
 
+                    up_chiffre_4.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                     up_chiffre_4.setText("/\\");
                         up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,18 +100,23 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
 
+                        texte_chiffre_1.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_chiffre_1.setText("0");
                         getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
+                        texte_chiffre_2.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_chiffre_2.setText("0");
                         getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
+                        texte_chiffre_3.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_chiffre_3.setText("0");
                         getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
 
+                        texte_chiffre_4.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_chiffre_4.setText("0");
                         getContentPane().add(texte_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
+                        down_chiffre_1.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         down_chiffre_1.setText("\\/");
                         down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +125,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
+                        down_chiffre_2.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         down_chiffre_2.setText("\\/");
                         down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +134,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
+                        down_chiffre_3.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         down_chiffre_3.setText("\\/");
                         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +143,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, -1, -1));
 
+                        down_chiffre_4.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         down_chiffre_4.setText("\\/");
                         down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +152,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, -1, -1));
 
+                        bouton_tester.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         bouton_tester.setText("Tester");
                         bouton_tester.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,30 +161,39 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(bouton_tester, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
 
+                        texte_lbl_nb_chiffres_exacts.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts :");
                         getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
+                        texte_nb_chiffres_exacts.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_nb_chiffres_exacts.setText("Exacts : 0");
                         getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
+                        texte_lbl_nb_chiffres_hauts.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_lbl_nb_chiffres_hauts.setText("Nombre de chiffres trop hauts :");
                         getContentPane().add(texte_lbl_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
 
+                        texte_nb_chiffres_hauts.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_nb_chiffres_hauts.setText("Trop bas : 0");
                         getContentPane().add(texte_nb_chiffres_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
+                        texte_lbl_nb_chiffres_bas.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_lbl_nb_chiffres_bas.setText("Nombre de chiffres trop bas :");
                         getContentPane().add(texte_lbl_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
 
+                        texte_nb_chiffres_bas.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_nb_chiffres_bas.setText("Trop bas : 0");
                         getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
 
+                        texte_score.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         texte_score.setText("Tentatives");
                         getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, -1, -1));
 
+                        teste_tentatives.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         teste_tentatives.setText("Tentatives : 0");
                         getContentPane().add(teste_tentatives, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
+                        bouton_recommencer.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
                         bouton_recommencer.setText("Recommencer");
                         bouton_recommencer.addActionListener(new java.awt.event.ActionListener() {
                             public void actionPerformed(java.awt.event.ActionEvent evt) {

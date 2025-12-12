@@ -27,6 +27,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="texte_intro">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Trouver le bon code en moins de 5 tentatives"/>
       </Properties>
       <Constraints>
@@ -37,6 +40,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="up_chiffre_1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -50,6 +56,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="up_chiffre_2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -63,6 +72,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="up_chiffre_3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -76,6 +88,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="up_chiffre_4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="/\u005c" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -89,6 +104,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_chiffre_1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Constraints>
@@ -99,6 +117,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_chiffre_2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Constraints>
@@ -109,6 +130,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_chiffre_3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Constraints>
@@ -119,6 +143,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_chiffre_4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Constraints>
@@ -129,6 +156,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="down_chiffre_1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -142,6 +172,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="down_chiffre_2">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -155,6 +188,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="down_chiffre_3">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -168,6 +204,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="down_chiffre_4">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="\u005c/" containsInvalidXMLChars="true"/>
       </Properties>
       <Events>
@@ -181,6 +220,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bouton_tester">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tester"/>
       </Properties>
       <Events>
@@ -194,6 +236,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_lbl_nb_chiffres_exacts">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Nombre de chiffres exacts :"/>
       </Properties>
       <Constraints>
@@ -204,6 +249,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_nb_chiffres_exacts">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Exacts : 0"/>
       </Properties>
       <Constraints>
@@ -214,6 +262,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_lbl_nb_chiffres_hauts">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Nombre de chiffres trop hauts :"/>
       </Properties>
       <Constraints>
@@ -224,6 +275,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_nb_chiffres_hauts">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Trop bas : 0"/>
       </Properties>
       <Constraints>
@@ -234,6 +288,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_lbl_nb_chiffres_bas">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Nombre de chiffres trop bas :"/>
       </Properties>
       <Constraints>
@@ -244,6 +301,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_nb_chiffres_bas">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Trop bas : 0"/>
       </Properties>
       <Constraints>
@@ -254,6 +314,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="texte_score">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tentatives"/>
       </Properties>
       <Constraints>
@@ -264,6 +327,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="teste_tentatives">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tentatives : 0"/>
       </Properties>
       <Constraints>
@@ -274,6 +340,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="bouton_recommencer">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Avenir Next Cyr" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Recommencer"/>
       </Properties>
       <Events>

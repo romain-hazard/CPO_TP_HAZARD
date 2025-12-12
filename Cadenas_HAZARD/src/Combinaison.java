@@ -58,7 +58,7 @@ public class Combinaison {
     public void genererNouvelleCombinaison() {
         Random r = new Random();
         for (int i = 0; i < 4; i++) {
-            combinaisonSecrete[i] = r.nextInt(10); // chiffres 0..9
+            combinaisonSecrete[i] = r.nextInt(10);
         }
     }
 }
