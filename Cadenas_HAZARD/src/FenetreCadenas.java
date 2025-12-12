@@ -68,6 +68,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
         texte_score = new javax.swing.JLabel();
         teste_tentatives = new javax.swing.JLabel();
         bouton_recommencer = new javax.swing.JButton();
+        Bouton_Menu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -214,6 +215,15 @@ public class FenetreCadenas extends javax.swing.JFrame {
                         });
                         getContentPane().add(bouton_recommencer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
+                        Bouton_Menu.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
+                        Bouton_Menu.setText("Menu");
+                        Bouton_Menu.addActionListener(new java.awt.event.ActionListener() {
+                            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                Bouton_MenuActionPerformed(evt);
+                            }
+                        });
+                        getContentPane().add(Bouton_Menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, -1, -1));
+
                         pack();
                     }// </editor-fold>//GEN-END:initComponents
 
@@ -326,6 +336,13 @@ public class FenetreCadenas extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
+    private void Bouton_MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_MenuActionPerformed
+        this.dispose();
+        Accueil accueil = new Accueil();
+        accueil.setVisible(true);
+        
+    }//GEN-LAST:event_Bouton_MenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -352,6 +369,7 @@ public class FenetreCadenas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bouton_Menu;
     private javax.swing.JButton bouton_recommencer;
     private javax.swing.JButton bouton_tester;
     private javax.swing.JButton down_chiffre_1;
