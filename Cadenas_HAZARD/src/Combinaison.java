@@ -10,6 +10,7 @@ import java.util.Random;
  * @author romai
  */
 public class Combinaison {
+    
 
     private int[] combinaisonSecrete;
 

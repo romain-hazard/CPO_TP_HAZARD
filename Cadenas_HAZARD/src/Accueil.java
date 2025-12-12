@@ -1,3 +1,6 @@
+
+import javax.swing.JSlider;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -15,7 +18,14 @@ public class Accueil extends javax.swing.JFrame {
      * Creates new form Accueil
      */
     public Accueil() {
-        initComponents();
+         initComponents();
+    
+       
+        
+    }
+
+    public JSlider getSlider_Niveau() {
+        return slider_Niveau;
     }
 
     /**
@@ -41,6 +51,11 @@ public class Accueil extends javax.swing.JFrame {
 
         Bouton_Start.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
         Bouton_Start.setText("Start");
+        Bouton_Start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton_StartActionPerformed(evt);
+            }
+        });
         getContentPane().add(Bouton_Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
 
         slider_Niveau.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
@@ -55,6 +70,15 @@ public class Accueil extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Bouton_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_StartActionPerformed
+         int niveau = slider_Niveau.getValue();
+
+        FenetreCadenas jeu = new FenetreCadenas(niveau);
+        jeu.setVisible(true);
+
+        this.dispose();
+    }//GEN-LAST:event_Bouton_StartActionPerformed
 
     /**
      * @param args the command line arguments

@@ -8,10 +8,22 @@
  * @author romai
  */
 public class FenetreCadenas extends javax.swing.JFrame {
+    
+    
+    
+    public FenetreCadenas(int niveau) {
+    
+        
+    combi = new Combinaison();   
+    combi.genererCombinaison();
+    initComponents();
+    this.maxTentatives = niveau;
+    
+}
 
-    private Combinaison combi = new Combinaison();
+    private Combinaison combi;
     private int tentative = 0;
-    private final int maxTentatives = 5;
+    private int maxTentatives;
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FenetreCadenas.class.getName());
 
