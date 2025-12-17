@@ -41,6 +41,7 @@ public class Grille {
     }
 
     public void fusion(int x1, int y1, int x2, int y2) {
+        
 
         int a = grille[x1][y1];
         int b = grille[x2][y2];
