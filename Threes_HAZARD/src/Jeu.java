@@ -27,6 +27,7 @@ public class Jeu {
 
     public void jouer(String direction) {
 
+        
         if (direction.equals("gauche")) {
             deplacerGauche();
         }
@@ -42,6 +43,7 @@ public class Jeu {
 
         coups++;
         grille.ajouterNombre();
+        
     }
 
     private void deplacerGauche() {

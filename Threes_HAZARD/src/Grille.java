@@ -5,13 +5,13 @@ import java.util.Random;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author Romain
  */
 public class Grille {
-  private int[][] grille;
+
+    private int[][] grille;
     private Random hasard;
 
     public Grille() {
@@ -26,6 +26,7 @@ public class Grille {
     }
 
     public void ajouterNombre() {
+        
         int ligne, colonne;
 
         do {
@@ -38,10 +39,10 @@ public class Grille {
         } else {
             grille[ligne][colonne] = 2;
         }
+
     }
 
     public void fusion(int x1, int y1, int x2, int y2) {
-        
 
         int a = grille[x1][y1];
         int b = grille[x2][y2];
@@ -57,5 +58,9 @@ public class Grille {
             grille[x1][y1] = a * 2;
             grille[x2][y2] = 0;
         }
-    }   
+    }
+
+    public void ajouterNombreDansGrille() {
+        ajouterNombre();
+    }
 }
