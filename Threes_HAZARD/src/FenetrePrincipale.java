@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -8,34 +11,42 @@
  * @author romai
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
+
+    private int coups = 0;
     private Jeu jeu;
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FenetrePrincipale.class.getName());
 
-    /**
-     * Creates new form FenetrePrincipale
-     */
-    public FenetrePrincipale() {
-        
-        initComponents();
-        
-        jeu = new Jeu();
-
-    int nbLignes = 4;
-    int nbColonnes = 4;
-
-
-    PanneauGrille.setLayout(new java.awt.GridLayout(nbLignes, nbColonnes));
-
-
-    for (int i = 0; i < nbLignes; i++) {
-        for (int j = 0; j < nbColonnes; j++) {
-            CelluleGraphique bouton = new CelluleGraphique(jeu, i, j);
-            PanneauGrille.add(bouton);
+    private void mettreAJourGrille() {
+        for (int k = 0; k < PanneauGrille.getComponentCount(); k++) {
+            CelluleGraphique c = (CelluleGraphique) PanneauGrille.getComponent(k);
+            c.mettreAJour();
         }
     }
-    
-        
+
+    public FenetrePrincipale() {
+
+        initComponents();
+
+        this.getContentPane().setBackground(new java.awt.Color(208, 230, 223));
+
+        jeu = new Jeu();
+
+        int nbLignes = 4;
+        int nbColonnes = 4;
+
+        PanneauGrille.setLayout(new java.awt.GridLayout(nbLignes, nbColonnes));
+
+       for (int i = 0; i < nbLignes; i++) {
+    for (int j = 0; j < nbColonnes; j++) {
+        CelluleGraphique bouton = new CelluleGraphique(jeu, i, j);
+        bouton.setBackground(new Color(139, 176, 176));
+
+        PanneauGrille.add(bouton);
+    }
+}
+
+
     }
 
     /**
@@ -52,77 +63,99 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         Boutton_Bas = new javax.swing.JButton();
         Boutton_Gauche = new javax.swing.JButton();
         Boutton_Droite = new javax.swing.JButton();
+        lbl_Nb_Coups_Aff = new javax.swing.JLabel();
+        lbl_Coups = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(31, 50, 90));
+        PanneauGrille.setBackground(new java.awt.Color(208, 230, 223));
+        PanneauGrille.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         PanneauGrille.setPreferredSize(new java.awt.Dimension(200, 200));
-        PanneauGrille.setLayout(new java.awt.GridLayout());
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 200, 200));
+        PanneauGrille.setLayout(new java.awt.GridLayout(1, 0));
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 150, 200));
 
-        Boutton_Haut.setText("/\\");
-            Boutton_Haut.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    Boutton_HautActionPerformed(evt);
-                }
-            });
-            getContentPane().add(Boutton_Haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, -1, -1));
+        Boutton_Haut.setFont(new java.awt.Font("Avenir Next Cyr", 1, 24)); // NOI18N
+        Boutton_Haut.setText("^");
+        Boutton_Haut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boutton_HautActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boutton_Haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, -1));
 
-            Boutton_Bas.setText("\\/");
-            Boutton_Bas.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    Boutton_BasActionPerformed(evt);
-                }
-            });
-            getContentPane().add(Boutton_Bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
+        Boutton_Bas.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
+        Boutton_Bas.setText("v");
+        Boutton_Bas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boutton_BasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boutton_Bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
 
-            Boutton_Gauche.setText("<");
-            Boutton_Gauche.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    Boutton_GaucheActionPerformed(evt);
-                }
-            });
-            getContentPane().add(Boutton_Gauche, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
+        Boutton_Gauche.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
+        Boutton_Gauche.setText("<");
+        Boutton_Gauche.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boutton_GaucheActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boutton_Gauche, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 60, -1));
 
-            Boutton_Droite.setText(">");
-            Boutton_Droite.addActionListener(new java.awt.event.ActionListener() {
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-                    Boutton_DroiteActionPerformed(evt);
-                }
-            });
-            getContentPane().add(Boutton_Droite, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, -1, -1));
+        Boutton_Droite.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
+        Boutton_Droite.setText(">");
+        Boutton_Droite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boutton_DroiteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Boutton_Droite, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 60, -1));
 
-            pack();
-        }// </editor-fold>//GEN-END:initComponents
+        lbl_Nb_Coups_Aff.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
+        lbl_Nb_Coups_Aff.setText("Nombre de coups :");
+        getContentPane().add(lbl_Nb_Coups_Aff, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
+
+        lbl_Coups.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
+        lbl_Coups.setText("0");
+        getContentPane().add(lbl_Coups, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, -1, -1));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
 
     private void Boutton_DroiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_DroiteActionPerformed
         jeu.jouer("droite");
-        PanneauGrille.repaint();
+        mettreAJourGrille();
+        coups++;
+        lbl_Coups.setText("" + coups);
     }//GEN-LAST:event_Boutton_DroiteActionPerformed
 
     private void Boutton_HautActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_HautActionPerformed
         jeu.jouer("haut");
-        PanneauGrille.repaint();
+        mettreAJourGrille();
+        coups++;
+        lbl_Coups.setText("" + coups);
     }//GEN-LAST:event_Boutton_HautActionPerformed
 
     private void Boutton_BasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_BasActionPerformed
         jeu.jouer("bas");
-        PanneauGrille.repaint();
+        mettreAJourGrille();
+        coups++;
+        lbl_Coups.setText("" + coups);
     }//GEN-LAST:event_Boutton_BasActionPerformed
 
     private void Boutton_GaucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_GaucheActionPerformed
         jeu.jouer("gauche");
-        PanneauGrille.repaint();
+        mettreAJourGrille();
+        coups++;
+        lbl_Coups.setText("" + coups);
     }//GEN-LAST:event_Boutton_GaucheActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -150,5 +183,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton Boutton_Gauche;
     private javax.swing.JButton Boutton_Haut;
     private javax.swing.JPanel PanneauGrille;
+    private javax.swing.JLabel lbl_Coups;
+    private javax.swing.JLabel lbl_Nb_Coups_Aff;
     // End of variables declaration//GEN-END:variables
 }
