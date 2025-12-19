@@ -26,32 +26,26 @@ public class Jeu {
     }
 
     public void jouer(String direction) {
-        boolean aBouge = false;
+    boolean aBouge = false;
 
-        switch (direction) {
-            case "gauche" ->
-                aBouge = deplacerGauche();
-            case "droite" ->
-                aBouge = deplacerDroite();
-            case "haut" ->
-                aBouge = deplacerHaut();
-            case "bas" ->
-                aBouge = deplacerBas();
-        }
-
-        if (aBouge) {
-            grille.ajouterNombre();
-            coups++;
-        }
-
-        if (estPerdu()) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Vous avez perdu !");
-        }
-
-        coups++;
-        grille.ajouterNombre();
-
+    switch (direction) {
+        case "gauche" -> aBouge = deplacerGauche();
+        case "droite" -> aBouge = deplacerDroite();
+        case "haut" -> aBouge = deplacerHaut();
+        case "bas" -> aBouge = deplacerBas();
     }
+
+    if (aBouge) {
+        grille.ajouterNombre();
+        coups++;
+    }
+
+
+    if (!aBouge && estPerdu()) {
+        javax.swing.JOptionPane.showMessageDialog(null, "Vous avez perdu !");
+    }
+}
+
 
     private boolean deplacerGauche() {
         int[][] g = grille.getGrille();
@@ -148,18 +142,13 @@ public class Jeu {
     public boolean estPerdu() {
         int[][] g = grille.getGrille();
 
-        // Vérifie s'il reste une case vide
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
+                
                 if (g[i][j] == 0) {
                     return false;
                 }
-            }
-        }
 
-        // Vérifie s'il y a des fusions possibles
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
                 if (i < 3 && fusionPossible(g[i][j], g[i + 1][j])) {
                     return false;
                 }
@@ -169,11 +158,11 @@ public class Jeu {
             }
         }
 
-        return true; // perdu
+        return true;
     }
 
     private boolean fusionPossible(int a, int b) {
-        return (a == 0 || b == 0 || (a == 1 && b == 2) || (a == 2 && b == 1) || (a == b && a > 2));
+        return (a == b && a > 2) || (a == 1 && b == 2) || (a == 2 && b == 1);
     }
 
 }

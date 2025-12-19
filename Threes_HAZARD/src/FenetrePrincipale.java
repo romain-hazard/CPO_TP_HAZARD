@@ -68,6 +68,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         lbl_Coups = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Button_Accueil = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
@@ -132,6 +133,15 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jLabel1.setText("A tiny puzzle that grows on you.");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 190, 50));
 
+        Button_Accueil.setFont(new java.awt.Font("BuloRounded-Black", 0, 12)); // NOI18N
+        Button_Accueil.setText("Accueil");
+        Button_Accueil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_AccueilActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Button_Accueil, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 430, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -171,6 +181,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         lbl_Coups.setText("" + coups);
     }//GEN-LAST:event_Boutton_GaucheActionPerformed
 
+    private void Button_AccueilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AccueilActionPerformed
+        this.dispose();
+        Accueil accueil = new Accueil();
+        accueil.setVisible(true);
+    }//GEN-LAST:event_Button_AccueilActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -202,6 +218,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton Boutton_Droite;
     private javax.swing.JButton Boutton_Gauche;
     private javax.swing.JButton Boutton_Haut;
+    private javax.swing.JButton Button_Accueil;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
