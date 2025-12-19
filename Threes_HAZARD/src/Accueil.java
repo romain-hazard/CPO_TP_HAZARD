@@ -51,7 +51,7 @@ public class Accueil extends javax.swing.JFrame {
         lbl_Consignes.setFont(new java.awt.Font("BuloRounded-Black", 0, 10)); // NOI18N
         lbl_Consignes.setText("<html>Threes est un jeu de puzzle assez proche du jeu 2048, dans lequel vous disposez d’une grille de 4 par 4 contenant des nombres.  <br><br> A chaque tour de jeu, un nombre, 1, ou 2, apparait sur un des bords disponibles de la grille. <br> <br> A chaque tour de jeu également, le joueur choisit une direction parmi les 4 points cardinaux :  <br> <br> -     Les éléments sont tous décalés d’une case vers la direction correspondante si la case est libre. <br> -     Si un élément entre en collision avec un élément de même valeur, ils fusionnent et la valeur résultante double   <br> -     Si un 1 rentre en collision avec un 2, ils s’additionnent. <br><br> La partie s’arrête quand la grille est remplie et qu’il n’est plus possible d’ajouter un élément. <br><br> L’objectif est de maximiser le nombre de coups joués.  <html>");
         lbl_Consignes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(lbl_Consignes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 520, 220));
+        getContentPane().add(lbl_Consignes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 490, 220));
 
         Button_Start.setFont(new java.awt.Font("BuloRounded-Black", 0, 12)); // NOI18N
         Button_Start.setText("Start");
