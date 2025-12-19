@@ -40,7 +40,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
        for (int i = 0; i < nbLignes; i++) {
     for (int j = 0; j < nbColonnes; j++) {
         CelluleGraphique bouton = new CelluleGraphique(jeu, i, j);
-        bouton.setBackground(new Color(139, 176, 176));
+        bouton.setBackground(new Color(103, 126, 116));
+        
 
         PanneauGrille.add(bouton);
     }
@@ -65,6 +66,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         Boutton_Droite = new javax.swing.JButton();
         lbl_Nb_Coups_Aff = new javax.swing.JLabel();
         lbl_Coups = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
@@ -74,7 +77,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         PanneauGrille.setPreferredSize(new java.awt.Dimension(200, 200));
         PanneauGrille.setLayout(new java.awt.GridLayout(1, 0));
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 150, 200));
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 150, 200));
 
         Boutton_Haut.setFont(new java.awt.Font("Avenir Next Cyr", 1, 24)); // NOI18N
         Boutton_Haut.setText("^");
@@ -83,7 +86,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 Boutton_HautActionPerformed(evt);
             }
         });
-        getContentPane().add(Boutton_Haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, -1, -1));
+        getContentPane().add(Boutton_Haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 320, -1, -1));
 
         Boutton_Bas.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
         Boutton_Bas.setText("v");
@@ -92,7 +95,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 Boutton_BasActionPerformed(evt);
             }
         });
-        getContentPane().add(Boutton_Bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
+        getContentPane().add(Boutton_Bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, -1, -1));
 
         Boutton_Gauche.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
         Boutton_Gauche.setText("<");
@@ -101,7 +104,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 Boutton_GaucheActionPerformed(evt);
             }
         });
-        getContentPane().add(Boutton_Gauche, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 60, -1));
+        getContentPane().add(Boutton_Gauche, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 60, -1));
 
         Boutton_Droite.setFont(new java.awt.Font("Avenir Next Cyr", 0, 24)); // NOI18N
         Boutton_Droite.setText(">");
@@ -110,21 +113,32 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 Boutton_DroiteActionPerformed(evt);
             }
         });
-        getContentPane().add(Boutton_Droite, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 60, -1));
+        getContentPane().add(Boutton_Droite, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 60, -1));
 
-        lbl_Nb_Coups_Aff.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
+        lbl_Nb_Coups_Aff.setFont(new java.awt.Font("BuloRounded-Black", 0, 12)); // NOI18N
         lbl_Nb_Coups_Aff.setText("Nombre de coups :");
-        getContentPane().add(lbl_Nb_Coups_Aff, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
+        getContentPane().add(lbl_Nb_Coups_Aff, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, -1, -1));
 
-        lbl_Coups.setFont(new java.awt.Font("Avenir Next Cyr", 0, 12)); // NOI18N
+        lbl_Coups.setFont(new java.awt.Font("BuloRounded-Black", 0, 12)); // NOI18N
         lbl_Coups.setText("0");
-        getContentPane().add(lbl_Coups, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, -1, -1));
+        getContentPane().add(lbl_Coups, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("BuloRounded-Black", 0, 36)); // NOI18N
+        jLabel2.setText("<html><span style='color:rgb(107, 205, 253);'>T</span><span style='color:rgb(253, 105, 131);'>H</span><span style='color:rgb(119, 126, 140)';>REES</span></html>");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, 60));
+
+        jLabel1.setFont(new java.awt.Font("BuloRounded-Black", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(119, 126, 140));
+        jLabel1.setText("A tiny puzzle that grows on you.");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 190, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boutton_DroiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_DroiteActionPerformed
         jeu.jouer("droite");
+        if (jeu.estPerdu()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Vous avez perdu !");}
         mettreAJourGrille();
         coups++;
         lbl_Coups.setText("" + coups);
@@ -132,6 +146,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     private void Boutton_HautActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_HautActionPerformed
         jeu.jouer("haut");
+        if (jeu.estPerdu()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Vous avez perdu !");}
         mettreAJourGrille();
         coups++;
         lbl_Coups.setText("" + coups);
@@ -139,6 +155,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     private void Boutton_BasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_BasActionPerformed
         jeu.jouer("bas");
+        if (jeu.estPerdu()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Vous avez perdu !");}
         mettreAJourGrille();
         coups++;
         lbl_Coups.setText("" + coups);
@@ -146,6 +164,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
     private void Boutton_GaucheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boutton_GaucheActionPerformed
         jeu.jouer("gauche");
+        if (jeu.estPerdu()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Vous avez perdu !");}
         mettreAJourGrille();
         coups++;
         lbl_Coups.setText("" + coups);
@@ -183,6 +203,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton Boutton_Gauche;
     private javax.swing.JButton Boutton_Haut;
     private javax.swing.JPanel PanneauGrille;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbl_Coups;
     private javax.swing.JLabel lbl_Nb_Coups_Aff;
     // End of variables declaration//GEN-END:variables

@@ -25,7 +25,7 @@ public class CelluleGraphique extends JButton {
 
         if (valeur == 0) {
             setText("");
-            setBackground(new Color(139, 176, 176));
+            setBackground(new Color(103, 126, 116));
         } else {
             setText(String.valueOf(valeur));
             
@@ -34,37 +34,37 @@ public class CelluleGraphique extends JButton {
                 case 1 -> {
                     setBackground(new Color(107, 205, 253)); 
                     setForeground(new Color(255, 255, 255));
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 10));
                 }
                 case 2 ->{
                     setBackground(new Color(253, 105, 131));
                     setForeground(new Color(255, 255, 255));
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 10));
                 }
                 case 3 ->{
                     setBackground(new Color(255, 255, 255));
                     setForeground(Color.black);
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 10));
                 }
                 case 6 -> {
                     setBackground(new Color(255, 255, 255));
                     setForeground(Color.black);
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 10));
                 }
                 case 12 -> {
                     setBackground(new Color(255, 255, 255));
                     setForeground(new Color(253, 105, 131));
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 8));
                 }
                 case 24 -> {
                     setBackground(new Color(255, 255, 255));
                     setForeground(new Color(253, 105, 131));
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 8));
                 }
                 case 42 -> {
                     setBackground(new Color(255, 255, 255));
                     setForeground(new Color(253, 105, 131));
-                    setFont(new Font("Avenir Next Cyr", Font.PLAIN, 12));
+                    setFont(new Font("BuloRounded-Black", Font.PLAIN, 8));
                 }
                 default -> setBackground(Color.RED);
             }

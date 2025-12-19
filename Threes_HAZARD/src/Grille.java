@@ -42,23 +42,24 @@ public class Grille {
 
     }
 
-    public void fusion(int x1, int y1, int x2, int y2) {
+    public boolean fusion(int x1, int y1, int x2, int y2) {
+    int a = grille[x1][y1];
+    int b = grille[x2][y2];
 
-        int a = grille[x1][y1];
-        int b = grille[x2][y2];
+    if (a == 0 || b == 0) return false;
 
-        if (a == 0 || b == 0) {
-            return;
-        }
-
-        if ((a == 1 && b == 2) || (a == 2 && b == 1)) {
-            grille[x1][y1] = 3;
-            grille[x2][y2] = 0;
-        } else if (a == b && a > 2) {
-            grille[x1][y1] = a * 2;
-            grille[x2][y2] = 0;
-        }
+    if ((a == 1 && b == 2) || (a == 2 && b == 1)) {
+        grille[x1][y1] = 3;
+        grille[x2][y2] = 0;
+        return true;
+    } else if (a == b && a > 2) {
+        grille[x1][y1] = a * 2;
+        grille[x2][y2] = 0;
+        return true;
     }
+    return false;
+}
+
 
     public void ajouterNombreDansGrille() {
         ajouterNombre();
